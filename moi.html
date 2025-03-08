@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="moi.css">
 </head>
 <body>
-    <!-- Barra de Navegação -->
-    <nav>
-        <div class="container">
-            <div class="nav-links">
-                <a href="#quem-e" class="nav-link">Quem é</a>
-                <a href="#fatos" class="nav-link">Fatos sobre ela</a>
-                <a href="#gostos" class="nav-link">Gostos</a>
-                <a href="#especialistas" class="nav-link">Especialistas</a>
-                <a href="#momentos" class="nav-link">Momentos</a>
-                <a href="#carta" class="nav-link">Carta</a>
-            </div>
-        </div>
-    </nav>
 
     <!-- Header -->
     <header>
@@ -373,6 +360,28 @@
                 });
             });
         });
+
+        // Script para o botão
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Alterna entre mostrar e esconder o menu
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        // Alterna o texto do botão
+        this.textContent = navLinks.classList.contains('active') ? 'FECHAR' : 'MENU';
+    });
+    
+    // Fecha o menu quando um link é clicado
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            menuToggle.textContent = 'MENU';
+        });
+    });
+});
     </script>
+    
 </body>
 </html>
