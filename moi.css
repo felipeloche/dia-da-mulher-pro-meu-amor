@@ -1,0 +1,292 @@
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --accent-color: #e91e63;
+    --section-bg: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Para scroll suave */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Elementos comuns */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Cabeçalho e navegação */
+header {
+    text-align: center;
+    padding: 100px 0 50px;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+/* Seção Quem É */
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-content {
+    flex: 2;
+    min-width: 300px;
+}
+
+.profile-content h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Seção Fatos */
+.fatos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.fato-card {
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-top: 3px solid var(--accent-color);
+}
+
+.fato-card h3 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+/* Seção Gostos */
+.gostos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.gosta, .nao-gosta {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gosta h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.nao-gosta h3 {
+    color: #F44336;
+    margin-bottom: 15px;
+}
+
+.lista-gostos {
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+.lista-gostos li {
+    margin-bottom: 10px;
+}
+
+/* Seção Especialistas */
+.especialistas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.especialista-card {
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.especialista-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.especialista-content {
+    padding: 20px;
+}
+
+.especialista-nome {
+    margin-bottom: 5px;
+    color: var(--accent-color);
+    font-size: 1.3rem;
+}
+
+.especialista-titulo {
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Seção Momentos */
+.momentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.momento-card {
+    background-color: var(--section-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.momento-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.momento-content {
+    padding: 15px;
+}
+
+.momento-titulo {
+    margin-bottom: 5px;
+    color: var(--accent-color);
+}
+
+.momento-data {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Seção Carta */
+.carta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--section-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carta-data {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.carta-saudacao {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carta-conteudo p {
+    margin-bottom: 15px;
+}
+
+.carta-assinatura {
+    text-align: right;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 50px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile, .gostos-container {
+        flex-direction: column;
+    }
+    
+    .especialistas-container {
+        grid-template-columns: 1fr;
+    }
+}
